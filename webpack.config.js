@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtraplugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -15,6 +17,7 @@ module.exports = {
     // assetModuleFilename: 'images/[contenthash][ext]',
   },
   mode: 'development',
+  // mode: 'production',
   devtool: 'inline-source-map',
   devServer: {
     host: 'localhost',
@@ -23,6 +26,7 @@ module.exports = {
   },
   module: {
     rules: [
+      /** -----------资源文件配置,优先级低于在module中配置的优先级-------------- */
       {
         test: /\.(png)$/,
         // 设置resource时图片资源会打包成文件，放在指定的文件路径中，可以设置文件路径和文件名
@@ -58,6 +62,16 @@ module.exports = {
           filename: 'images/[contenthash][ext]',
         },
       },
+      /** -----------style loader-------------- */
+      {
+        test: /\.(css|less)$/,
+        use: [MiniCssExtraplugin.loader, 'css-loader', 'less-loader'],
+      },
+      /** -------------字体-------------- */
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        type: 'asset/inline',
+      },
     ],
   },
   plugins: [
@@ -66,5 +80,14 @@ module.exports = {
       filename: 'index.html',
       inject: 'body',
     }),
+    new MiniCssExtraplugin({
+      filename: 'css/[contenthash].css',
+    }),
   ],
+  optimization: {
+    minimizer: [
+      // 代码压缩
+      new CssMinimizerPlugin(),
+    ],
+  },
 };

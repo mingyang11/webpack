@@ -2,6 +2,8 @@ import print from './demo';
 import imgsrc1 from '../assets/images/canvas.png';
 import imgsrc2 from '../assets/images/beijing.jpeg';
 import textDemo from '../assets/source/example.txt';
+import './style.css';
+import './style.less';
 
 print();
 
@@ -17,4 +19,6 @@ container.appendChild(imgElement2);
 const txtBlock = document.createElement('div');
 // txtBlock.style.cssText = 'width: 200px; height: 100px; background: red';
 txtBlock.textContent = textDemo;
+txtBlock.classList.add('hello');
 container.appendChild(txtBlock);
+// document.body.classList.add('hello');
