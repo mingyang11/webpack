@@ -4,9 +4,32 @@ const MiniCssExtraplugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  // entry: './src/index.js',
+  // entry: './src/babelExample.js',
+  /** 多入口 */
+  entry: {
+    index: {
+      import: './src/index.js',
+      dependOn: 'shared',
+    },
+    another: {
+      import: './src/another-module.js',
+      dependOn: 'shared',
+    },
+    /** 公共资源不重复打包 */
+    shared: 'lodash',
+  },
+  // entry: {
+  //   index: './src/index.js',
+  //   another: './src/another-module.js',
+  // },
+  // entry: {
+  //   index: './src/index.js',
+  //   // another: './src/another-module.js',
+  // },
   output: {
-    filename: 'index.[hash:6].js',
+    /** 多入口的情况下需要对名字进行处理：[name]可以拿到入口文件名字的拓展名 */
+    filename: '[name].[hash:6].js',
     path: path.resolve(__dirname, 'build'),
     clean: true,
     /**
@@ -72,6 +95,18 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         type: 'asset/inline',
       },
+      /** -------------babel-loader-------------- */
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: [['@babel/plugin-transform-runtime']],
+          },
+        },
+      },
     ],
   },
   plugins: [
@@ -89,5 +124,9 @@ module.exports = {
       // 代码压缩
       new CssMinimizerPlugin(),
     ],
+    /**公告代码抽离方式二 */
+    splitChunks: {
+      chunks: 'all',
+    },
   },
 };

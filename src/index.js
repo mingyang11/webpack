@@ -2,6 +2,7 @@ import print from './demo';
 import imgsrc1 from '../assets/images/canvas.png';
 import imgsrc2 from '../assets/images/beijing.jpeg';
 import textDemo from '../assets/source/example.txt';
+import './async-module.js';
 import './style.css';
 import './style.less';
 
@@ -22,3 +23,17 @@ txtBlock.textContent = textDemo;
 txtBlock.classList.add('hello');
 container.appendChild(txtBlock);
 // document.body.classList.add('hello');
+(function () {
+  setTimeout(() => {
+    /** 在注释里添加参数
+     * @params [webpackChunkName] : 指定模块名称
+     * @params [webpackPrefetch]: 开启预加载
+     */
+    //  懒加载
+    import(/* webpackChunkName: 'math', webpackPrefetch: true */ './math').then(
+      (params) => {
+        console.log(params, '121');
+      }
+    );
+  }, 5000);
+})();
