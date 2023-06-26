@@ -1,8 +1,7 @@
-import print from './demo';
 import imgsrc1 from '../assets/images/canvas.png';
 import imgsrc2 from '../assets/images/beijing.jpeg';
 import textDemo from '../assets/source/example.txt';
-import './async-module.js';
+// import './async-module.js';
 import './style.css';
 import './style.less';
 
@@ -26,6 +25,7 @@ document.body.classList.add('hello');
 document.addEventListener('click', () => {
   import(/* webpackChunkName: 'math', webpackPrefetch: true */ './math').then(
     (params) => {
+      // eslint-disable-next-line no-console
       console.log(params.add(1, 2), '121');
     }
   );
