@@ -1,17 +1,13 @@
 function getStr() {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve('yangmy');
     }, 2000);
   });
 }
 
-const logFun = () => {
-  console.log('chuze');
-};
-
 async function helloWorld() {
-  let str = await getStr();
+  const str = await getStr();
   console.log(str);
   return str;
 }
