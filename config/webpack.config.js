@@ -1,14 +1,15 @@
-const commonConf = require('./webpack.common.js');
-const devConf = require('./webpack.dev.js');
-const prodConf = require('./webpack.prod.js');
-
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtraplugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugins = require('terser-webpack-plugin');
 
+const commonConf = require('./webpack.common');
+const devConf = require('./webpack.dev');
+const prodConf = require('./webpack.prod');
+
 module.exports = (env) => {
+  console.log(12);
   return {
     // entry: './src/index.js',
     // entry: './src/babelExample.js',
@@ -107,7 +108,7 @@ module.exports = (env) => {
           test: /\.m?js$/,
           exclude: /(node_modules|bower_components)/,
           use: {
-            loader: 'babel-loader',
+            loader: ['babel-loader'],
             options: {
               presets: ['@babel/preset-env'],
               plugins: [['@babel/plugin-transform-runtime']],
@@ -132,7 +133,7 @@ module.exports = (env) => {
         new CssMinimizerPlugin(),
         new TerserPlugins(),
       ],
-      /**公告代码抽离方式二 */
+      /** 公告代码抽离方式二 */
       splitChunks: {
         // chunks: 'all',
         cacheGroups: {

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --env production --config ./config/webpack.config.js",
-    "start": "webpack serve --env development --config ./config/webpack.config.js"
+    "start": "webpack serve --env development --config ./config/webpack.config.js",
+    "lint": "npx eslint ./src"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,14 @@
     "@babel/runtime": "^7.22.5",
     "babel-loader": "^9.1.2",
     "css-minimizer-webpack-plugin": "^5.0.1",
+    "eslint": "^8.43.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "html-webpack-plugin": "^5.5.3",
+    "husky": "^8.0.3",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.7.6",
     "terser-webpack-plugin": "^5.3.9",
