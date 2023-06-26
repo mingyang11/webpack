@@ -5,8 +5,8 @@
   "main": "iiff.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx webpack",
-    "start": "npx webpack-dev-server"
+    "build": "npx webpack --env production --config ./config/webpack.config.js",
+    "start": "npx webpack serve --env development --config ./config/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,8 @@
     "html-webpack-plugin": "^5.5.3",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.7.6",
-    "webpack-dev-server": "^4.15.1"
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.9.0"
   }
 }
