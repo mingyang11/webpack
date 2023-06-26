@@ -1,3 +1,7 @@
+const commonConf = require('./webpack.common.js');
+const devConf = require('./webpack.dev.js');
+const prodConf = require('./webpack.prod.js');
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtraplugin = require('mini-css-extract-plugin');
@@ -5,7 +9,6 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugins = require('terser-webpack-plugin');
 
 module.exports = (env) => {
-  console.log(12121, '---===========');
   return {
     // entry: './src/index.js',
     // entry: './src/babelExample.js',

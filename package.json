@@ -5,8 +5,8 @@
   "main": "iiff.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx webpack --env production --config ./config/webpack.config.js",
-    "start": "npx webpack serve --env development --config ./config/webpack.config.js"
+    "build": "webpack --env production --config ./config/webpack.config.js",
+    "start": "webpack serve --env development --config ./config/webpack.config.js"
   },
   "repository": {
     "type": "git",
