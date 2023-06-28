@@ -1,1 +1,2 @@
-console.log(12);
+function fun() {}
+fun();
