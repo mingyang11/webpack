@@ -1,13 +1,13 @@
 {
   "name": "webpack",
   "version": "1.0.0",
-  "description": "**1.为什么需要 webpack?**",
+  "description": "webpack学习路程",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --env production --config ./config/webpack.config.js",
     "start": "webpack serve --env development --config ./config/webpack.config.js",
-    "lint": "npx eslint ./src --ext .js,.jsx"
+    "lint": "npx eslint ./src --ext .js,.jsx,.ts,.tsx"
   },
   "repository": {
     "type": "git",
