@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugins = require('terser-webpack-plugin');
 

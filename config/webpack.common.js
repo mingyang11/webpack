@@ -18,6 +18,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(css|less)$/,
+        use: ['style-loader', 'css-loader', 'less-loader'],
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         use: {
@@ -26,7 +30,7 @@ module.exports = {
             presets: [
               [
                 // 预设polyfill
-                '@babel/preset-env',
+                '@babel/preset-react',
                 {
                   // polyfill 只加载使用的部分
                   useBuiltIns: 'usage',
@@ -34,8 +38,6 @@ module.exports = {
                   corejs: '3',
                 },
               ],
-              // 解析react
-              '@babel/preset-react',
             ],
             // 使用transform-runtime，避免全局污染，注入helper
             plugins: ['@babel/plugin-transform-runtime'],
