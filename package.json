@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --env production --config ./config/webpack.config.js",
     "start": "webpack serve --env development --config ./config/webpack.config.js",
-    "lint": ""
+    "lint": "npx eslint ./src"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,8 @@
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "@babel/runtime": "^7.22.5",
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
     "babel-loader": "^9.1.2",
     "css-minimizer-webpack-plugin": "^5.0.1",
     "eslint": "^8.43.0",
@@ -49,6 +51,7 @@
     "html-webpack-plugin": "^5.5.3",
     "husky": "^8.0.3",
     "mini-css-extract-plugin": "^2.7.6",
+    "prettier": "^2.8.8",
     "terser-webpack-plugin": "^5.3.9",
     "webpack-dev-server": "^4.15.1",
     "webpack-merge": "^5.9.0"
