@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: path.resolve(__dirname, '../index.jsx'),
@@ -53,5 +54,6 @@ module.exports = {
       filename: 'index.html',
       inject: 'body',
     }),
+    // new BundleAnalyzerPlugin(),
   ],
 };

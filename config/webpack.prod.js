@@ -3,6 +3,9 @@ const TerserPlugins = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'production',
+  cache: {
+    type: 'filesystem',
+  },
   optimization: {
     minimizer: [
       // 代码压缩
@@ -18,6 +21,8 @@ module.exports = {
           chunks: 'all',
         },
       },
+      // treeshaking
+      usedExports: true,
     },
   },
 };
