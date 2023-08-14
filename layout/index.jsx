@@ -1,8 +1,8 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 // import routes from './routes';
-import Header from './src/Header';
-import styles from './Layout.module.less';
+import Header from '../src/components/Header';
+import styles from './index.module.less';
 
 function Layout() {
   return (
