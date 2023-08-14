@@ -1,0 +1,31 @@
+// .container {
+//   width: 100vw;
+//   height: 100vh;
+//   .left {
+//     float: left;
+//     width: 200px;
+//     height: 100%;
+//     background-color: #f66;
+//   }
+//   .right {
+//     height: 100%;
+//     background-color: #66f;
+//   }
+// }
+
+// flex版本
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  .left {
+    width: 200px;
+    height: 100%;
+    background-color: #f66;
+  }
+  .right {
+    flex: 1;
+    height: 100%;
+    background-color: #66f;
+  }
+}

@@ -1,0 +1,43 @@
+// .container {
+//   width: 100vw;
+//   height: 100vh;
+//   .left {
+//     float: left;
+//     width: 100px;
+//     height: 100%;
+//     background-color: #f66;
+//   }
+//   .right {
+//     float: right;
+//     width: 100px;
+//     height: 100%;
+//     background-color: #66f;
+//   }
+//   .center {
+//     margin: 0 100px;
+//     height: 100%;
+//     background-color: #3c9;
+//   }
+// }
+
+// flex版本
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  .left {
+    width: 100px;
+    height: 100%;
+    background-color: #f66;
+  }
+  .center {
+    flex: 1;
+    height: 100%;
+    background-color: #3c9;
+  }
+  .right {
+    width: 100px;
+    height: 100%;
+    background-color: #66f;
+  }
+}

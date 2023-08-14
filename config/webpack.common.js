@@ -15,12 +15,18 @@ module.exports = {
     path: path.resolve(__dirname, '../build'),
     clean: true,
   },
-
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   module: {
     rules: [
       {
         test: /\.(css|less)$/,
         use: ['style-loader', 'css-loader', 'less-loader'],
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'scss-loader'],
       },
       {
         test: /\.(js|jsx)$/,
