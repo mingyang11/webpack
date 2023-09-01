@@ -16,7 +16,7 @@ function Layout() {
       <main>
         <Outlet />
       </main>
-      <footer>footer</footer>
+      <footer>2023-yangmy@servyou.com</footer>
     </div>
   );
 }

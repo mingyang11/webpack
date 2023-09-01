@@ -1,0 +1,6 @@
+.specify-selector {
+  display: flex;
+  & ～ .specify-selector {
+    margin-top: 0px;
+  }
+}

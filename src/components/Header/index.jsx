@@ -27,16 +27,36 @@ function Header() {
           label: '布局',
           key: '/css/fulllayout',
         },
+        {
+          label: '选择器',
+          key: '/css/selector'
+        },
       ],
     },
     {
       label: 'JavaScript',
       key: '/animation',
     },
-    // {
-    //   label: '工程化',
-    //   key: 'SubMenu',
-    // },
+    {
+      label: '工程化',
+      key: 'SubMenu',
+      children: [
+        {
+          type: 'group',
+          label: 'webpack',
+          children: [
+            {
+              label: 'plugin',
+              key: '/engineer/plugin',
+            },
+            {
+              label: 'loader',
+              key: '/engineer/loader',
+            },
+          ],
+        },
+      ],
+    },
   ];
   const handleMenuClick = ({ key }) => {
     navigate(key);
