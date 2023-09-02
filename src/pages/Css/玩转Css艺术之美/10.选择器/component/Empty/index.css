@@ -1,0 +1,15 @@
+.emptyContent {
+  border-top: 1px solid #eae6e6;
+  padding: 5px;
+  &:empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://jowayyoung.github.io/static/img/icss/empty.svg')
+      no-repeat center;
+    &::after {
+      margin-top: 180px;
+      content: '没钱没数据';
+    }
+  }
+}

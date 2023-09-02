@@ -31,15 +31,12 @@ function AdJoin() {
 
       <div className="specify-selector">
         <div className="button">
-          <input id="btn1" type="radio" name="btns" hidden />
           <label for="btn1">点击我切换样式</label>
         </div>
         <div className="button">
-          <input id="btn2" type="radio" name="btns" hidden />
           <label for="btn2">点击我切换样式</label>
         </div>
         <div className="button">
-          <input id="btn3" type="radio" name="btns" hidden />
           <label for="btn3">点击我切换样式</label>
         </div>
       </div>

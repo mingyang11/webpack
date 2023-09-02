@@ -3,4 +3,65 @@
   & ～ .specify-selector {
     margin-top: 0px;
   }
+  .list {
+    border: 1px solid #f66;
+    width: 160px;
+    margin: 10px 10px;
+    line-height: 2;
+    font-weight: bold;
+    color: #f66;
+    & + .list {
+      margin: 10px 10px;
+    }
+    li {
+      padding: 0 10px;
+    }
+    .next {
+      background-color: #66f;
+      color: #fff;
+      & + li {
+        background-color: #f90;
+        color: #fff;
+      }
+    }
+    .next-all {
+      background-color: #66f;
+      color: #fff;
+      & ~ li {
+        background-color: #09f;
+        color: #fff;
+      }
+    }
+    .next-filter {
+      background-color: #66f;
+      color: #fff;
+      & ~ .filter {
+        background-color: #09f;
+        color: #fff;
+      }
+    }
+  }
+
+  .button {
+    margin-left: 20px;
+    & + .button {
+      margin-left: 20px;
+    }
+    label {
+      display: block;
+      padding: 0 10px;
+      height: 40px;
+      background-color: #3c9;
+      cursor: pointer;
+      line-height: 40px;
+      font-size: 16px;
+      color: #fff;
+      transition: all 600ms;
+    }
+    label:hover {
+      padding: 0 20px;
+      border-radius: 20px;
+      background-color: #f66;
+    }
+  }
 }
