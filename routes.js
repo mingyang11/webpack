@@ -9,6 +9,7 @@ import FullLayout from './src/pages/Css/玩转Css艺术之美/3.全屏布局';
 // import BoxModel from './src/Css/玩转Css艺术之美/8.变量计算';
 import Animation from './src/pages/Css/玩转Css艺术之美/9.变换与动画';
 import Selector from './src/pages/Css/玩转Css艺术之美/10.选择器';
+import BackgroundAndMask from './src/pages/Css/玩转Css艺术之美/11.背景与遮罩';
 
 const routes = [
   {
@@ -38,6 +39,11 @@ const routes = [
             path: 'selector',
             title: '选择器',
             element: <Selector />,
+          },
+          {
+            path: 'backgroundAndMask',
+            title: '背景与遮罩',
+            element: <BackgroundAndMask />,
           },
         ],
       },

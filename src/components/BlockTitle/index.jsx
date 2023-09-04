@@ -2,9 +2,12 @@ import React from 'react';
 import styles from './index.module.less';
 
 function BlockTitle(props) {
-  const { title } = props;
+  const { title, showBorder = false } = props;
   return (
-    <div className={styles.blockContent}>
+    <div
+      className={styles.blockContent}
+      border={showBorder ? 'show' : undefined}
+    >
       <div></div>
       <div>{title}</div>
     </div>

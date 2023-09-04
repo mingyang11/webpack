@@ -29,7 +29,11 @@ function Header() {
         },
         {
           label: '选择器',
-          key: '/css/selector'
+          key: '/css/selector',
+        },
+        {
+          label: '背景与遮罩',
+          key: '/css/backgroundAndMask',
         },
       ],
     },

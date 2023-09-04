@@ -1,0 +1,24 @@
+@bg-1: '../../../../../../../assets/images/canvas.png';
+@bg-2: '../../../../../../../assets/images/beijing.jpeg';
+@bg-3: '../../../../../../../assets/images/css.png';
+@bg-4: '../../../../../../../assets/images/dog.jpg';
+
+.splicedBg {
+  width: 100%;
+  height: 200px;
+  background-color: #3c9;
+  background-image: url(@bg-1), url(@bg-2);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left, right;
+  background-size: auto 200px, auto 200px;
+}
+.overlyingBg {
+  margin-top: 20px;
+  width: 100%;
+  height: 200px;
+  background-color: #3c9;
+  background-image: url(@bg-4), url(@bg-3);
+  background-repeat: repeat, no-repeat;
+  background-position: left, center;
+  background-size: auto 120px, auto 200px;
+}
