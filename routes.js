@@ -10,6 +10,8 @@ import FullLayout from './src/pages/Css/玩转Css艺术之美/3.全屏布局';
 import Animation from './src/pages/Css/玩转Css艺术之美/9.变换与动画';
 import Selector from './src/pages/Css/玩转Css艺术之美/10.选择器';
 import BackgroundAndMask from './src/pages/Css/玩转Css艺术之美/11.背景与遮罩';
+import TransitionAndAnimate from './src/pages/Css/玩转Css艺术之美/13.变换与动画';
+import Example from './src/pages/Css/玩转Css艺术之美/14.例子';
 
 const routes = [
   {
@@ -44,6 +46,18 @@ const routes = [
             path: 'backgroundAndMask',
             title: '背景与遮罩',
             element: <BackgroundAndMask />,
+          },
+          {
+            path: 'shadowAndMask',
+            element: '暂无',
+          },
+          {
+            path: 'transitionAndAnimation',
+            element: <TransitionAndAnimate />,
+          },
+          {
+            path: 'example',
+            element: <Example />,
           },
         ],
       },

@@ -35,6 +35,18 @@ function Header() {
           label: '背景与遮罩',
           key: '/css/backgroundAndMask',
         },
+        {
+          label: '阴影与滤镜',
+          key: '/css/shadowAndMask',
+        },
+        {
+          label: '变换与动画',
+          key: '/css/transitionAndAnimation',
+        },
+        {
+          label: '例子',
+          key: '/css/example',
+        },
       ],
     },
     {
