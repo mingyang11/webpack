@@ -2,6 +2,8 @@ import React from 'react';
 import BlockTitle from '../../../../components/BlockTitle';
 import Shoufengqin from './component/shoufengqin';
 import Zhediemianban from './component/zhediemianban';
+import LoginForm from './component/loginForm';
+import Fangdajing from './component/fangdajing';
 import styles from './index.module.less';
 
 function Selector() {
@@ -18,17 +20,13 @@ function Selector() {
         </div>
         <div>
           <BlockTitle title="登陆表单" showBorder />
-          <div>手风琴</div>
-        </div>
-        <div>
-          <BlockTitle title="放大镜" showBorder />
-          <div>12</div>
+          <LoginForm />
         </div>
       </div>
       <div>
         <div>
           <BlockTitle title="滚动渐变背景" showBorder />
-          <div>滚动渐变背景</div>
+          <Fangdajing />
         </div>
       </div>
     </div>
