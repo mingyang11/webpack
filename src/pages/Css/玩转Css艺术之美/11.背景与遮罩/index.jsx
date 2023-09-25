@@ -9,6 +9,8 @@ import LinearGradient from './component/LinearGradient';
 import RadialGradient from './component/RadialGradient';
 import ConicGradient from './component/ConicGradient/index';
 import Demo1 from './component/Demo1';
+import Demo2 from './component/Demo2';
+import Demo3 from './component/Demo3';
 import styles from './index.module.less';
 
 function Selector() {
@@ -35,11 +37,11 @@ function Selector() {
         </div>
         <div style={{ width: '33%' }}>
           <BlockTitle title="radial-gradient" showBorder />
-          demo2
+          <Demo2 />
         </div>
         <div style={{ width: '33%' }}>
           <BlockTitle title="conic-gradient" showBorder />
-          demo1
+          <Demo3 />
         </div>
       </div>
       <div>

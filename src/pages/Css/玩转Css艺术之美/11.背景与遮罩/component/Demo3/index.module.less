@@ -1,0 +1,70 @@
+.content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  > div {
+    width: 100px;
+    height: 100px;
+  }
+  .demo1 {
+    background: conic-gradient(deeppink, yellowgreen);
+  }
+  .demo2 {
+    background: conic-gradient(from 270deg at 35px 35px, deeppink, yellowgreen);
+  }
+  .demo3 {
+    border-radius: 50%;
+    background: conic-gradient(red, orange, yellow, green, teal, blue, purple);
+  }
+  .demo4 {
+    background: conic-gradient(
+      deeppink 0,
+      deeppink 30%,
+      yellowgreen 30%,
+      yellowgreen 70%,
+      teal 70%,
+      teal 100%
+    );
+    border-radius: 50%;
+  }
+  .demo5 {
+    background: conic-gradient(
+      from 270deg at 40px 40px,
+      deeppink 0%,
+      deeppink 90deg,
+      transparent 90deg,
+      transparent 360deg
+    );
+    border: 1px solid #000;
+  }
+  .demo6 {
+    background: conic-gradient(
+      from 270deg at 40px 40px,
+      deeppink 0%,
+      deeppink 90deg,
+      transparent 90deg,
+      transparent 360deg
+    );
+    border: 1px solid #000;
+    background-position: -20px -20px;
+  }
+  .demo7 {
+    background: repeating-conic-gradient(
+      deeppink 0 15deg,
+      yellowgreen 15deg 30deg
+    );
+    border: 1px solid #000;
+  }
+  .demo8 {
+    background: repeating-conic-gradient(#fff, #000, #fff 0.5deg);
+    border: 1px solid #000;
+  }
+  .demo9 {
+    background-image: repeating-radial-gradient(
+      circle at center center,
+      rgb(241, 43, 239),
+      rgb(239, 246, 244) 3px
+    );
+    border: 1px solid #000;
+  }
+}
