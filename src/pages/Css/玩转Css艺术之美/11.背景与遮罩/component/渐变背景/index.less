@@ -1,14 +1,18 @@
+// 这种改变了尺寸，会不断造成回流
 .gradient-bg {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100px;
   background: linear-gradient(135deg, #f66, #f90, #3c9, #09f, #66f) left
-    center/300% 300%;
+    center/200% 200%;
   font-weight: bold;
   font-size: 100px;
-  color: #fff;
-  animation: move 1s infinite;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: move 3s infinite;
 }
 @keyframes move {
   0%,
@@ -19,3 +23,55 @@
     background-position-x: right;
   }
 }
+
+// 新方法，使用css新技能property来做
+// @property --colorA {
+//   syntax: '<color>';
+//   inherits: false;
+//   initial-value: fuchsia;
+// }
+// @property --colorC {
+//   syntax: '<color>';
+//   inherits: false;
+//   initial-value: #f79188;
+// }
+// @property --colorF {
+//   syntax: '<color>';
+//   inherits: false;
+//   initial-value: red;
+// }
+// .gradient-bg {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-weight: bold;
+//   background: linear-gradient(
+//     90deg,
+//     var(--colorA),
+//     var(--colorC),
+//     var(--colorF)
+//   );
+//   animation: change 2s infinite linear;
+// }
+// @keyframes change {
+//   20% {
+//     --colorA: red;
+//     --colorC: #a93ee0;
+//     --colorF: fuchsia;
+//   }
+//   40% {
+//     --colorA: #ff3c41;
+//     --colorC: #e228a0;
+//     --colorF: #2e4c96;
+//   }
+//   60% {
+//     --colorA: orange;
+//     --colorC: green;
+//     --colorF: teal;
+//   }
+//   80% {
+//     --colorA: #ae63e4;
+//     --colorC: #0ebeff;
+//     --colorF: #efc371;
+//   }
+// }
